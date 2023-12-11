@@ -22,11 +22,7 @@ fun showGeneric() {
 }
 
 
-
-//动态参数
-
-// 示例: 定义泛型的动态参数
-class Dinamic<T> (vararg objects: T) {
+class Dinamic<T> (vararg objects: T) { //定义泛型的动态参数
 
     //out 我们的T只能被读取，不能被修改
     val objectArray: Array<out T> = objects //因为T为任意类型，需要集合承接，需要定义一个下界，即协变

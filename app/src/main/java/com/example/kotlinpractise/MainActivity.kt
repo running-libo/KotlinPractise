@@ -40,5 +40,7 @@ class MainActivity : ComponentActivity() {
 
         extensionTest()
         extensionTest2()
+
+        stadardTest()
     }
 }

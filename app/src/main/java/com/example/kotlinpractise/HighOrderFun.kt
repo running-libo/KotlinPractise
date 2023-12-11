@@ -35,27 +35,6 @@ private fun loginApiService(userName: String, userpwd: String): Boolean {
     return userName == USER_NAME_DB && userpwd == USER_PWD_DB
 }
 
-fun gotoLogin() {
-    //同一个方法的不同种调用
-    loginApi("lili", "123456", responseResult = { msg: String, code: Int ->
-        println("最终登录结果 msg:$msg code:$code")
-    })
-
-    loginApi("lili", "123456", { msg, code->
-        println("最终登录结果 msg:$msg code:$code")
-    })
-
-    //最简写方法，lambda表达式可以写到参数里面，也可以写到参数外面
-    loginApi("lili", "123456") { msg, code ->
-        println("最终登录结果 msg:$msg code:$code")
-    }
-
-    val bool = loginApi2("sfs", "123") { msg, code ->
-        println("最终登录结果 msg:$msg code:$code")
-    }
-
-}
-
 //函数类型作为返回类型
 
 /**
@@ -78,4 +57,25 @@ fun loginApi2(userName: String, userpwd: String, responseResult: (String, Int) -
     return { msg: String, code: Int ->
         false //自行判断code是否登录成功
     }
+}
+
+fun gotoLogin() {
+    //同一个方法的不同种调用
+    loginApi("lili", "123456", responseResult = { msg: String, code: Int ->
+        println("最终登录结果 msg:$msg code:$code")
+    })
+
+    loginApi("lili", "123456", { msg, code->
+        println("最终登录结果 msg:$msg code:$code")
+    })
+
+    //最简写方法，lambda表达式可以写到参数里面，也可以写到参数外面
+    loginApi("lili", "123456") { msg, code ->
+        println("最终登录结果 msg:$msg code:$code")
+    }
+
+    val bool = loginApi2("sfs", "123") { msg, code ->
+        println("最终登录结果 msg:$msg code:$code")
+    }
+
 }
