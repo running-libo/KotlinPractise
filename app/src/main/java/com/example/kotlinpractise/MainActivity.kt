@@ -11,6 +11,8 @@ import com.example.kotlinpractise.base.gotoLogin
 import com.example.kotlinpractise.base.initParams
 import com.example.kotlinpractise.base.lateinit
 import com.example.kotlinpractise.base.noName
+import com.example.kotlinpractise.base.showEnumInfo
+import com.example.kotlinpractise.base.showSealedInfo
 import com.example.kotlinpractise.base.testbyLazy
 
 class MainActivity : ComponentActivity() {
@@ -40,5 +42,8 @@ class MainActivity : ComponentActivity() {
         testbyLazy()
 
         OuterClass().show()
+
+        showEnumInfo()
+        showSealedInfo()
     }
 }
