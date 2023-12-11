@@ -2,45 +2,43 @@ package com.example.kotlinpractise
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.kotlinpractise.ui.theme.KotlinPractiseTheme
+import com.example.kotlinpractise.base.OuterClass
+import com.example.kotlinpractise.base.Person
+import com.example.kotlinpractise.base.Range
+import com.example.kotlinpractise.base.funParams
+import com.example.kotlinpractise.base.funType
+import com.example.kotlinpractise.base.gotoLogin
+import com.example.kotlinpractise.base.initParams
+import com.example.kotlinpractise.base.lateinit
+import com.example.kotlinpractise.base.noName
+import com.example.kotlinpractise.base.testbyLazy
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            KotlinPractiseTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android")
-                }
-            }
+
+        Person()
+
+        lateinit().apply {
+            sqlData
+            lateInitUse()
         }
-    }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+        Range().apply {
+            range(64)
+            whenTest()
+        }
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    KotlinPractiseTheme {
-        Greeting("Android")
+        initParams()
+
+        noName()
+        funParams()
+        funType()
+
+        gotoLogin()
+
+        testbyLazy()
+
+        OuterClass().show()
     }
 }

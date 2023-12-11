@@ -1,7 +1,7 @@
 package com.example.kotlinpractise.base
 
 /**
- * 匿名函数
+ * 匿名函数 == lambda表达式
  */
 
 
@@ -26,7 +26,7 @@ fun funParams() {
     }
 
     //调用函数
-    methodAction(1, 2, 3)
+    System.out.println(methodAction(1, 2, 3))
 }
 
 /**

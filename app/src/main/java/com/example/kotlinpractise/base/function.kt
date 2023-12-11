@@ -1,6 +1,6 @@
 package com.example.kotlinpractise.base
 
-fun test() {
+fun initParams() {
     //有参数默认值可不传，可选择性传
     action01("haha", 20)
     action02("lily")
