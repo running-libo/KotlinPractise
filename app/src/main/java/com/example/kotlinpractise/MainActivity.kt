@@ -33,5 +33,9 @@ class MainActivity : ComponentActivity() {
 
         showEnumInfo()
         showSealedInfo()
+
+        showGeneric()
+
+        showOutIn()
     }
 }
