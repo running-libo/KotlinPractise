@@ -37,5 +37,8 @@ class MainActivity : ComponentActivity() {
         showGeneric()
 
         showOutIn()
+
+        extensionTest()
+        extensionTest2()
     }
 }
