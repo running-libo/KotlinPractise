@@ -1,8 +1,5 @@
 package com.example.kotlinpractise
 
-class EnumSealed {
-}
-
 /**
  * 枚举定义单类型
  */

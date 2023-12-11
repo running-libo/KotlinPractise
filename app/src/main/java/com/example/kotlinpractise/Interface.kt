@@ -1,7 +1,5 @@
 package com.example.kotlinpractise
 
-import androidx.compose.foundation.text.KeyboardActions
-
 //kotlin的接口
 //接口里面的所有成员和方法和接口本身都是 public open的
 //实现类不仅要重写接口的函数，还要重写接口的成员

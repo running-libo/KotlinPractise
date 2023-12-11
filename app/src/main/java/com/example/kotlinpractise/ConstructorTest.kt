@@ -1,24 +1,24 @@
 package com.example.kotlinpractise
 
-class Person(val name: String) {
+class User(val name: String) { //主构造函数
     var age = 0
     var sex = "man"
 
-    constructor(): this("main name 1") {
+    /**
+     * 有参次构造方法
+     */
+    constructor(name: String, age: Int, id: Int): this(name) {  //次构造函数，必须去调用主构造
 
+    }
+    constructor(name: String, sex: String): this(name) {
+        this.sex = sex
     }
 
     /**
      * 无参次构造方法
      */
-    constructor(name: String, age: Int) : this("main name 2") {
-        this.age = age
-    }
-    /**
-     * 有参次构造方法
-     */
-    constructor(name: String, sex: String): this("main name 3") {
-        this.sex = sex;
+    constructor(): this("暂无名字") {
+
     }
 
     init {
@@ -27,7 +27,15 @@ class Person(val name: String) {
     }
 
     fun main() {
-        Person("", "")
-        Person("")
+        User()   //次构造
+        User("小明")  //主构造
+        User("小明", 18, 1)  //次构造
     }
+
+    //继承
+    class VipUser : User(), Use {}
+
+    open class User {}
+
+    interface Use {}
 }
