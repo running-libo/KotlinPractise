@@ -1,4 +1,4 @@
-package com.example.kotlinpractise.base
+package com.example.kotlinpractise
 
 class Person(val name: String) {
     var age = 0

@@ -1,4 +1,4 @@
-package com.example.kotlinpractise.base
+package com.example.kotlinpractise
 
 /**
  * 高阶函数

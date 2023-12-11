@@ -1,4 +1,4 @@
-package com.example.kotlinpractise.base
+package com.example.kotlinpractise
 
 class Companionobject {
 
@@ -14,8 +14,8 @@ class Companionobject {
 
     fun test() {
         //背后代码：生成了 Companionobject.companion类
-        println(Companionobject.info)
+        println(info)
 
-        Companionobject.showInfo()
+        showInfo()
     }
 }

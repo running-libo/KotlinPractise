@@ -1,4 +1,4 @@
-package com.example.kotlinpractise.base
+package com.example.kotlinpractise
 
 /**
  * 匿名函数 == lambda表达式

@@ -1,4 +1,4 @@
-package com.example.kotlinpractise.base
+package com.example.kotlinpractise
 
 fun initParams() {
     //有参数默认值可不传，可选择性传
